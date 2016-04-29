@@ -1,0 +1,105 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ii ~ td {
+	display: none;
+}
+input {
+	cursor: pointer;
+}
+input[name=CountryName] {
+	width: 90px;
+
+	text-align: center;
+	background: #626262;
+}
+input[name=CountryCode] {
+	width: 30px;
+
+	text-align: center;
+	background: #626262;
+}
+.container {
+	width: 430px;
+	background: #555;
+	margin: auto;
+	margin-top: 50px;
+	box-shadow: 0 2px 4px 0 #0186ba, 0 2px 10px 0 #04acec;
+}
+.container th, .container td {
+	box-shadow: 0 0 0 1px #2a2a2a;
+	text-align: center;
+}
+.container tr {
+	height: 25px;
+}
+.newBtn {
+	height: 19px;
+	width: 19px;
+
+	border: none;
+	outline: none;
+	background: url(../imgs/sprite.png) 68px 89px;
+
+	margin-top: 2px;
+}
+.newBtn:hover {
+	background: url(../imgs/sprite.png) 68px 64px;
+}
+.editInput {
+	height: 15px;
+	width: 80px;
+
+	text-align: center;
+	background: #888;
+}
+.editBtn {
+	height: 20px;
+	width: 20px;
+
+	background: url(../imgs/sprite.png) 140px 91px;
+	border: none;
+	outline: none;
+}
+.editBtn:hover {
+	background: url(../imgs/sprite.png) 140px 65px;
+}
+.removeBtn {
+	height: 19px;
+	width: 19px;
+
+	background: url(../imgs/sprite.png) 118px 89px;
+	border: none;
+
+	outline: none;
+
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.removeBtn:hover {
+	background: url(../imgs/sprite.png) 118px 64px;
+}
+.saveBtn {
+	height: 19px;
+	width: 19px;
+
+	background: url(../imgs/sprite.png) 94px 89px;
+	border: none;
+	outline: none;
+}
+.saveBtn:hover {
+	background: url(../imgs/sprite.png) 94px 64px;
+}
+.cancelBtn {
+	height: 19px;
+	width: 19px;
+
+	background: url(../imgs/sprite.png) 22px 88px;
+	border: none;
+	outline: none;
+}
+.cancelBtn:hover {
+	background: url(../imgs/sprite.png) 22px 305px;
+}

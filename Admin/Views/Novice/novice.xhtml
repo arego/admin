@@ -1,0 +1,153 @@
+<!DOCTYPE HTML [
+    <!ENTITY title "Personal Information Form">
+    <!ENTITY author "Areg Mirijanyan">
+    <!ENTITY mail "aregmirijanyan8@gmail.com">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="welcome" href="content/imgs/logo.png" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1250" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="imageToolbar" content="no" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="x-dns-prefetch-control" content="off" />
+    <meta itemprop="name" content="jqTouch" />
+    <meta name="abstract" content="&title;" />
+    <meta name="author" content="&author;, &mail;" />
+    <meta name="category" content="registration" />
+    <meta name="copyright" content="Ogma company" />
+    <meta name="date" content="2015-10-30" scheme="yyyy-mm-dd" />
+    <meta name="description" content="&title;" />
+    <meta name="designer" content="&author;" />
+    <meta name="keywords" content="novice,first name,last name,cell,url,phone number,email" />
+    <meta name="language" content="en" />
+    <meta name="owner" content="&mail;" />
+    <meta name="reply-to" content="&mail;" />
+    <meta name="robots" content="index, follow" />
+    <meta name="subject" content="&title;" />
+    <meta name="target" content="all" />
+    <meta name="title" content="&title;" />
+    <meta name="topic" content="&title;" />
+    <style>
+        @import url(../Content/Style/novice.css);
+    </style>
+	<script src="../../scripts/Models/novice.js"></script>
+	<script src="../../scripts/Models/BaseModel.js"></script>
+	<script src="../../scripts/Models/UserModel.js"></script>
+    <title>&title;</title>
+</head>
+<body title="&title;">
+    <main>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Google form</legend>
+                            <form action="http://www.google.am/" autocomplete="on">
+                                <input type="hidden" id="NoviceID" name="ID" />
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="FirstName"><em>*</em>First Name:</label></th>
+                                            <td>
+                                                <input type="text" id="FirstName" name="FirstName" pattern="[A-Za-z]{3,}" required="required" autofocus="true" placeholder="Enter your first name..." title="There must be more than three letters and any word in English." />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="LastName"><em>*</em>Last Name:</label></th>
+                                            <td>
+                                                <input type="text" id="LastName" name="LastName" pattern="[A-Za-z]{3,}" required="required" placeholder="Enter your last name..." title="There must be more than 3 letters and any word in English." />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="MiddleName">Middle Name:</label></th>
+                                            <td>
+                                                <input type="text" id="MiddleName" name="MiddleName" placeholder="Enter your middle name..." title="Middle Name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="Password"><em>*</em>Password:</label></th>
+                                            <td>
+                                                <input type="password" id="Password" name="Password" pattern="[\S]{5,}" title="The password must be at least 5 characters long." required="required" placeholder="Enter your password..." />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="PwdConfirm"><em>*</em>Confirm:</label></th>
+                                            <td>
+                                                <input type="password" id="PwdConfirm" pattern="[\S]{5,}" required="required" placeholder="Confirm your password..." title="Confirm your password." />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" id="GoogleSave" name="GoogleSave" title="Save google form.">SAVE</button>
+                                            </td>
+                                            <td>
+                                                <button type="reset" name="GoogleCancel" title="Cancel google form.">CANCEL</button>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </form>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>W3school form</legend>
+                            <form action="http://www.w3schools.com/" name="W3SchoolForm" method="post" autocomplete="off">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="Phone"><em>*</em>Phone #:</label></th>
+                                            <td>
+                                                <input type="tel" id="Phone" name="Phone" pattern="[\w\d]{5,}" required="required" placeholder="Enter your phone number..." title="Phone number" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="Cell"><em>*</em>Cell #:</label></th>
+                                            <td>
+                                                <input type="number" id="Cell" name="Cell" required="required" placeholder="Enter your cell number..." title="Cell number" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="Website">Website:</label></th>
+                                            <td>
+                                                <input type="url" id="Website" name="Website" required="required" placeholder="Enter your website url..." title="Website url" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="Email"><em>*</em>Email:</label></th>
+                                            <td>
+                                                <input type="email" id="Email" name="Email" required="required" placeholder="Enter your email address..." title="Email address" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="Age"><em>*</em>Age:</label></th>
+                                            <td>
+                                                <input type="number" id="Age" name="Age" required="required" min="8" max="100" placeholder="Age..." title="Age" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <button type="submit" id="Save" name="W3SchoolSave" title="Save w3school form">SAVE</button>
+                                            </td>
+                                            <td>
+                                                <button type="reset" name="W3SchoolCancel" title="Cancel w3school form">CANCEL</button>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </form>
+                        </fieldset>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

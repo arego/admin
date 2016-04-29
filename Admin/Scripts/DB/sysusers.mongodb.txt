@@ -1,0 +1,33 @@
+﻿var sysusers= [];
+
+sysusers[0] = new SysUser;
+sysusers[0].ID = 0;
+sysusers[0].FirstName = 'Lavo';
+sysusers[0].last_name = 'Marabyan';
+sysusers[0].MI = 'Davit';
+sysusers[0].Password = 'aaaaaaaa';
+sysusers[0].Phone = '+37477000901';
+sysusers[0].Cell = '+37455711699';
+sysusers[0].Website = 'https://www.facebook.com/lavooooooooooooooo';
+sysusers[0].Email = 'lavrentimarabyan@gmail.com';
+sysusers[0].IsMale = true;
+sysysers[0].File = 'https://scontent-frt3-1.xx.fbcdn.net/hphotos-xlt1/v/t1.0-9/12572966_720908424711454_5852142104224018309_n.jpg?oh=dfcff1cac31b83ba0035784377ccbbae&oe=57875507'
+sysusers[0].IsProfitA = false;
+sysusers[0].IsProfitB = true;
+sysusers[0].IsProfitC = false;
+
+sysusers[1] = new Novice;
+sysusers[1].ID = 1;
+sysusers[1].FirstName = 'Hovo';
+sysusers[1].last_name = 'Kazhoyan';
+sysusers[1].MI = 'Henrik';
+sysusers[1].Password = 'aaaaaaaa';
+sysusers[1].Phone = '+37410744825';
+sysusers[1].Cell = '+37455744824';
+sysusers[1].Website = 'https://www.facebook.com/hovo.kajoyan?fref=ts';
+sysusers[1].Email = 'kazhoyan1992@gmail.com';
+sysusers[0].IsMale = true;
+sysusers[1].File = 'https://scontent-frt3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/16926_478122462348038_2995417737209976695_n.jpg?oh=86963c698d0317a63a1c89a093f11186&oe=57921AA2'
+sysusers[0].IsProfitA = false;
+sysusers[0].IsProfitB = false;
+sysusers[0].IsProfitC = true;

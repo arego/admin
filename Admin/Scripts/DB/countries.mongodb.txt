@@ -1,0 +1,44 @@
+﻿var countryList = new CountryList;
+
+var countriesList = [{
+	Insert: 'Insert',
+	ID: 0,
+	CountryName: 'Canada',
+	CountryCode: 'CA'
+},
+{	Insert: 'Insert',
+	ID: 1,
+	CountryName: 'Armenia',
+	CountryCode: 'AM'
+},
+{	Insert: 'Insert',
+	ID: 2,
+	CountryName: 'USA',
+	CountryCode: 'US'
+},
+{	Insert: 'Insert',
+	ID: 3,
+	CountryName: 'Sweden',
+	CountryCode: 'SE'
+},
+{	Insert: 'Insert',
+	ID: 4,
+	CountryName: 'Saudi Arabia',
+	CountryCode: 'SA'
+},
+{	Insert: 'Insert',
+	ID: 5,
+	CountryName: 'India',
+	CountryCode: 'IN'
+},
+{	Insert: 'Insert',
+	ID: 6,
+	CountryName: 'Switzerland',
+	CountryCode: 'CH'
+}];
+
+var countries = countriesList.map(function(item, i){
+	return new Country(item);
+});
+
+CountryList.prototype.push.apply(countryList, countries);

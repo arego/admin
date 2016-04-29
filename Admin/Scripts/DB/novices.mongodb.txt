@@ -1,0 +1,25 @@
+﻿var novices= [];
+
+novices[0] = new Novice;
+novices[0].ID = 0;
+novices[0].FirstName = 'Lavo';
+novices[0].LastName = 'Marabyan';
+novices[0].MI = 'Davit';
+novices[0].password = 'aaaaaaaa';
+novices[0].Phone = '+37477000901';
+novices[0].Cell = '+37455711699';
+novices[0].Website = 'https://www.facebook.com/lavooooooooooooooo';
+novices[0].Email = 'lavrentimarabyan@gmail.com';
+novices[0].Age = '16';
+
+novices[1] = new Novice;
+novices[1].ID = 1;
+novices[1].FirstName = 'Hovo';
+novices[1].LastName = 'Kazhoyan';
+novices[1].MI = 'Henrik';
+novices[1].password = 'aaaaaaaa';
+novices[1].Phone = '+37410744825';
+novices[1].Cell = '+37455744824';
+novices[1].Website = 'https://www.facebook.com/hovo.kajoyan?fref=ts';
+novices[1].Email = 'kazhoyan1992@gmail.com';
+novices[1].Age = '23';

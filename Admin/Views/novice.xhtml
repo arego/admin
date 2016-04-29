@@ -1,0 +1,287 @@
+<!DOCTYPE HTML [
+	<!ENTITY title "Personal Information Form">
+    <!ENTITY author "Areg Mirijanyan">
+    <!ENTITY mail "aregmirijanyan8@gmail.com">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="shortcut icon" type="welcome" href="content/imgs/facebook.png" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="content-type" content="text/html; charset=windows-1250" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="imageToolbar" content="no" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="x-dns-prefetch-control" content="off" />
+	<meta itemprop="name" content="jqTouch" />
+	<meta name="abstract" content="&title;" />
+	<meta name="author" content="&author;, &mail;" />
+	<meta name="category" content="registration" />
+	<meta name="copyright" content="Ogma company" />
+	<meta name="date" content="2015-10-30" scheme="yyyy-mm-dd" />
+	<meta name="description" content="&title;" />
+	<meta name="designer" content="&author;" />
+	<meta name="keywords" content="novice,first name,last name,cell,url,phone number,email" />
+	<meta name="language" content="en" />
+	<meta name="owner" content="&mail;" />
+	<meta name="reply-to" content="&mail;" />
+	<meta name="robots" content="index, follow" />
+	<meta name="subject" content="&title;" />
+	<meta name="target" content="all" />
+	<meta name="title" content="&title;" />
+	<meta name="topic" content="&title;" />
+	<style>
+		@import url(../Content/Style/novice.css);
+	</style>
+	<script type="text/javascript" src="../scripts/jQuery/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="../scripts/jQuery/ui/jquery.ui.gridView.js"></script>
+
+	<script type="text/javascript" src="../scripts/extentions.js"></script>
+
+	<script type="text/javascript" src="../scripts/Models/PassiveModel/BaseModel.js"></script>
+	<script type="text/javascript" src="../scripts/Models/ActiveModel/BaseModel.js"></script>
+
+	<script type="text/javascript" src="../scripts/Models/PassiveModel/Country.js"></script>
+	<script type="text/javascript" src="../scripts/Models/PassiveModel/State.js"></script>
+	<!--<script type="text/javascript" src="../scripts/Models/novice.js"></script>
+	<script type="text/javascript" src="../scripts/Models/SysUser.js"></script>-->
+	<script type="text/javascript" src="../scripts/Models/PassiveModel/novice.js"></script>
+	<script type="text/javascript" src="../scripts/Models/ActiveModel/Novice.js"></script>
+	<!--<script type="text/javascript" src="../scripts/Models/UserModel.js"></script>-->
+
+	<script type="text/javascript" src="../scripts/novice.js"></script>
+	<title>&title;</title>
+</head>
+<body title="&title;">
+	<main>
+		<table id="PopupNovice">
+			<tbody>
+				<tr>
+					<td class="title_button_bar" colspan="2">
+						<input type="button" value="_" id="Minimize" />
+						<input type="button" value="X" id="Close" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!--<input type="button" value="New" />
+						<input type="button" value="Popup" id="PopupButton" class="popupButton" />-->
+						<fieldset>
+							<legend>Google form</legend>
+							<form action="http://www.google.am/" autocomplete="on">
+								<input type="hidden" name="NoviceID" id="NoviceID" value="0" />
+								<table>
+									<tbody>
+										<tr>
+											<th><label for="Firstname"><em>*</em>First Name:</label></th>
+											<td>
+												<input type="text" id="Firstname" name="FirstName" pattern="[A-Za-z]{3,}" required="required" autofocus="autofocus" placeholder="Enter your first name..." title="There must be more than three letters and any word in English." />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Lastname"><em>*</em>Last Name:</label></th>
+											<td>
+												<input type="text" id="Lastname" name="LastName" pattern="[A-Za-z]{3,}" required="required" placeholder="Enter your last name..." title="There must be more than 3 letters and any word in English." />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="MiddleName">Middle Name:</label></th>
+											<td>
+												<input type="text" id="MiddleName" name="MiddleName" placeholder="Enter your middle name..." title="Middle Name" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Password"><em>*</em>Password:</label></th>
+											<td>
+												<input type="password" id="Password" name="Password" pattern="[\S]{5,}" title="The password must be at least 5 characters long." required="required" placeholder="Enter your password..." />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="PwdConfirm"><em>*</em>Confirm:</label></th>
+											<td>
+												<input type="password" id="PwdConfirm" pattern="[\S]{5,}" required="required" placeholder="Confirm your password..." title="Confirm your password." />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Country"><em>*</em>Country:</label></th>
+											<td>
+												<select id="CountryID" name="CountryID" size="3" accesskey="c" placeholder="Select..." title="Country Name">
+													<option value="0">Armenia</option>
+													<option value="1">France</option>
+													<option value="2">Germany</option>
+													<option value="3">Russia</option>
+													<option value="4">USA</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<button type="submit" id="GoogleSave" name="GoogleSave" title="Save google form.">SAVE</button>
+											</td>
+											<td>
+												<button type="reset" name="GoogleCancel" title="Cancel google form.">CANCEL</button>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</form>
+						</fieldset>
+					</td>
+					<td>
+						<fieldset>
+							<legend>W3school form</legend>
+							<form action="http://www.w3schools.com/" name="W3SchoolForm" method="post" autocomplete="off">
+								<input type="hidden" name="" id="" value="0" />
+								<table>
+									<tbody>
+										<tr>
+											<th><label for="Phone"><em>*</em>Phone #:</label></th>
+											<td>
+												<input type="tel" id="PhoneNumber" name="PhoneNumber" pattern="[\w\d]{5,}" required="required" placeholder="Enter your phone number..." title="Phone number" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Cell"><em>*</em>Cell #:</label></th>
+											<td>
+												<input type="number" id="CellNumber" name="CellNumber" required="required" placeholder="Enter your cell number..." title="Cell number" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Website">Website:</label></th>
+											<td>
+												<input type="url" id="Website" name="Website" required="required" placeholder="Enter your website url..." title="Website url" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Email"><em>*</em>Email:</label></th>
+											<td>
+												<input type="email" id="Email" name="Email" required="required" placeholder="Enter your email address..." title="Email address" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="Age"><em>*</em>Age:</label></th>
+											<td>
+												<input type="number" id="Age" name="Age" required="required" min="8" max="100" placeholder="Age..." title="Age" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="State"><em>*</em>State:</label></th>
+											<td>
+												<select id="State" name="State" size="3" multiple="multiple" accesskey="c" placeholder="Select..." title="State">
+													<option value="0">Alabama</option>
+													<option value="1">Alaska</option>
+													<option value="2">Arizona</option>
+													<option value="3">Arkansas</option>
+													<option value="4">California</option>
+													<option value="5">Colorado</option>
+													<option value="6">Connecticut</option>
+													<option value="7">Delaware</option>
+													<option value="8">District Of Columbia</option>
+													<option value="9">Florida</option>
+													<option value="10">Georgia</option>
+													<option value="11">Hawaii</option>
+													<option value="12">Idaho</option>
+													<option value="13">Illinois</option>
+													<option value="14">Indiana</option>
+													<option value="15">Iowa</option>
+													<option value="16">Kansas</option>
+													<option value="17">Kentucky</option>
+													<option value="18">Louisiana</option>
+													<option value="19">Maine</option>
+													<option value="20">Maryland</option>
+													<option value="21">Massachusetts</option>
+													<option value="22">Michigan</option>
+													<option value="23">Minnesota</option>
+													<option value="24">Mississippi</option>
+													<option value="25">Missouri</option>
+													<option value="26">Montana</option>
+													<option value="27">Nebraska</option>
+													<option value="28">Nevada</option>
+													<option value="29">New Hampshire</option>
+													<option value="30">New Jersey</option>
+													<option value="31">New Mexico</option>
+													<option value="32">New York</option>
+													<option value="33">North Carolina</option>
+													<option value="34">North Dakota</option>
+													<option value="35">Ohio</option>
+													<option value="36">Oklahoma</option>
+													<option value="37">Oregon</option>
+													<option value="38">Pennsylvania</option>
+													<option value="39">Rhode Island</option>
+													<option value="40">South Carolina</option>
+													<option value="41">South Dakota</option>
+													<option value="42">Tennessee</option>
+													<option value="43">Texas</option>
+													<option value="44">Utah</option>
+													<option value="45">Vermont</option>
+													<option value="46">Virginia</option>
+													<option value="47">Washington</option>
+													<option value="48">West Virginia</option>
+													<option value="49">Wisconsin</option>
+													<option value="50">Wyoming</option>
+												</select>
+													<!--<input type="button" />-->
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>
+												<button type="submit" id="Save" name="W3SchoolSave" title="Save w3school form">SAVE</button>
+											</td>
+											<td>
+												<button type="reset" name="W3SchoolCancel" title="Cancel w3school form">CANCEL</button>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</form>
+						</fieldset>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	<popup id="Popup" class="popup"></popup>
+	<script>
+		//<![CDATA[
+		var novice1 = new Novice({
+				FirstName: 'FirstName',
+				LastName: 'LastName',
+				MiddleName: 'MiddleName',
+				Password: 'Password',
+				CountryID: 0,
+				PhoneNumber: 'PhoneNumber',
+				CellNumber: 'CellNumber',
+				Website: 'http://google.com',
+				Email: 'Email',
+				Age: 'Age',
+				State: 'State'
+			});
+			novice1.insert();
+		var popupNovice = new PopUp();
+		var gvNovices = new GridView({
+			data: sessionStorage,
+			cols: [
+					{
+						cap: 'ID', name: 'NoviceID', tooltip: 'Identifier', temp: function (item) {
+							return '<spam onclick="popupNovice.open(' + item.ID + ');"></span>';
+						}},
+						{ cap: 'First Name', name: 'FirstName', temp: '<i>' },
+						{ cap: 'Last Name', name: 'LastName', temp: '<i>' },
+						{ cap: 'Middle Name', name: 'MiddleName', temp: '<i>' },
+						{ cap: 'Phone Number', name: 'PhoneNumber', temp: '<i>' },
+						{ cap: 'Email', name: 'Email', temp: '<i>' },
+						{ cap: 'Age', name: 'Age', temp: '<i>' },
+						{ cap: 'Web Site', name: 'Website', temp: function (item) {
+								return '<a href="' + item.Website + '"></a>';
+							}
+						}
+				]
+			});
+			$(document.body).append(gvNovices);
+		//]]>
+	</script>
+</body>
+</html>

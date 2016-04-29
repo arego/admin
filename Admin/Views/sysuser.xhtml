@@ -1,0 +1,145 @@
+﻿<!DOCTYPE HTML [
+    <!ENTITY author "Areg Mirijanyan">
+    <!ENTITY mail "aregmirijanyan8@gmail.com">
+    <!ENTITY ruby "Your browser doesn't support &lt;ruby&gt; tag.">
+    <!ENTITY title "User Application">
+    <!ENTITY url "http://www.ogmainc.com/">
+]>
+<html title="&title;" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        @import url(../Content/Style/sysuser.css);
+    </style>
+    <script src="../scripts/sysuser.js"></script>
+</head>
+<body>
+    <main>
+        <form id="sysuserForm" action="http://www.w3schools.com" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="SysUserID" name="SysUserID" value="0" />
+            <table>
+                <caption>&title;</caption>
+                <tbody class="info">
+                    <tr>
+                        <th class="caption_info" colspan="2">User Info</th>
+                    </tr>
+                    <tr>
+                        <th><label for="FirstName" title="First Name"><sup>*</sup>F<u>i</u>rst Name:</label></th>
+                        <td>
+                            <input type="text" id="FirstName" name="FirstName" required="required" accesskey="i" maxlength="30" pattern="[A-Za-z]{2,}" placeholder="Enter your first name..." title="There must be more than three letters." />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="LastName" title="Last Name"><sup>*</sup><u>L</u>ast Name:</label></th>
+                        <td>
+                            <input type="text" id="LastName" name="LastName" required="required" accesskey="l" maxlength="50" pattern="[A-Za-z]{2,}" placeholder="Enter your last name..." title="There must be more than three letters." />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="Age" title="Age"><sup>*</sup><u>A</u>ge:</label></th>
+                        <td>
+                            <input type="number" id="Age" name="Age" required="required" accesskey="A" max="100" min="8" placeholder="Age..." title="Age" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="Password" title="Password"><sup>*</sup><u>P</u>assword:</label></th>
+                        <td>
+                            <input type="password" id="Password" name="Password" required="required" accesskey="p" maxlength="50" pattern="[\S]{5,}" placeholder="Enter your password..." title="The password must be at least 5 characters long" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="Confirm" title="Confirm your password"><sup>*</sup><u>C</u>onfirm:</label></th>
+                        <td>
+                            <input type="password" id="Confirm" required="required" accesskey="c" maxlength="50" pattern="[\S]{5,}" placeholder="Confirm your password..." title="Confirm your password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="JobTitle" title="Job Title"><u>J</u>ob Title:</label></th>
+                        <td>
+                            <select id="JobTitle" name="JobTitle" accesskey="j" placeholder="Select..." title="Job Title">
+                                <option value="0">Select...</option>
+                                <option value="1">Area Manager</option>
+                                <option value="2">Region Manager</option>
+                                <option value="3">Executor</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="security">
+                    <tr>
+                        <th class="security_caption" colspan="2">Security</th>
+                    </tr>
+                    <tr>
+                        <th class="top_left"><label for="Male" title="Gender">Gender:</label></th>
+                        <td colspan="2">
+                            <ruby>
+                                <rt><label class="size" for="Male" title="Male">M</label></rt>
+                                <rp>&ruby;</rp>
+                                <input type="radio" id="Male" name="Gender" title="Male" tabindex="6" checked="checked" />
+                            </ruby>
+                            <ruby>
+                                <rt><label class="size" for="Female" title="Female">F</label></rt>
+                                <rp>&ruby;</rp>
+                                <input type="radio" id="Female" name="gender" title="Female" tabindex="7" />
+                            </ruby>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+                            <label class="profit" for="ProfitA" title="Profit">Profit:</label>
+                            <ruby class="up_ruby">
+                                <rt><label class="size" for="ProfitA" title="Version A">A</label></rt>
+                                <rp>&ruby;</rp>
+                                <input type="checkbox" id="ProfitA" name="ProfitA" title="Version A" tabindex="8" />
+                                <input type="hidden" name="a" value="false" />
+                            </ruby>
+                            <ruby class="up_ruby">
+                                <rt><label class="size" for="ProfitB" title="Version B">B</label></rt>
+                                <rp>&ruby;</rp>
+                                <input type="checkbox" id="ProfitB" name="ProfitB" title="Version B" tabindex="9" />
+                                <input type="hidden" name="b" value="false" />
+                            </ruby>
+                            <ruby class="up_ruby">
+                                <rt><label class="size" for="ProfitC" title="Version C">C</label></rt>
+                                <rp>&ruby;</rp>
+                                <input type="checkbox" id="ProfitC" name="ProfitC" title="Version C" tabindex="10" />
+                                <input type="hidden" name="c" value="false" />
+                            </ruby>
+                        </th>
+                    </tr>
+                    <tr class="teletype">
+                        <th><label for="Teletype" title="Teletype"><u>T</u>eletype:</label></th>
+                        <td>
+                            <textarea id="Teletype" name="Teletype" title="Teletype" accesskey="t" cols="50" rows="4" wrap="hard" spellcheck="true" placeholder="Call me..." tabindex="11"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="Country_id" title="Country">C<u>o</u>untry:</label></th>
+                        <td>
+                            <input id="CountryID" name="CountryID" class="country" list="CountryList" accesskey="o" placeholder="Select..." title="Country" tabindex="12" />
+                            <datalist>
+                                <option value="Armenia"></option>
+                                <option value="Belgium"></option>
+                                <option value="France"></option>
+                                <option value="Georgia"></option>
+                                <option value="USA"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="buttons">
+                            <button class="button_upload" type="button">Upload</button>
+                            <input type="file" name="upload" title="Upload" />
+                            <span>
+                                <button type="submit" name="getFormW3Schools" formaction="http://www.w3schools.com/" title="Save">Save</button>
+                                <button type="reset" title="Cancel">Cancel</button>
+                            </span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </main>
+</body>
+</html>

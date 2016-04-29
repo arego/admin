@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<style>
+		@import url(../../Content/Style/country.css);
+	</style>
+	<script type="text/javascript" src="../../scripts/jQuery/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="../../scripts/jQuery/ui/jquery.ui.gridView.js"></script>
+
+	<script type="text/javascript" src="../../scripts/extentions.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/PassiveModel/BaseModel.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/ActiveModel/BaseModel.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/PassiveModel/Country.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/PassiveModel/State.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/ModelList/BaseModelList.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/ModelList/CountryList.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/ModelList/StateList.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		//<![CDATA[
+		$.ajax({
+			url: 'http://localhost:51039/scripts/DB/countries.mongodb.txt',
+			success: function (mongoDBCountries) {
+				eval(mongoDBCountries);
+				$.ajax({
+					url: 'http://localhost:51039/scripts/DB/state.mongodb.txt',
+					success: function (mongoDBStates) {
+						eval(mongoDBStates);
+						var gvStates = new GridView({
+							cols: [
+								{ cap: 'ID', name: 'ID', tooltip: 'Identifier', temp: '<span>' },
+								{ cap: 'Country ID', name: 'CountryID', tooltip: 'Country ID', temp: '<i>' },
+								{ cap: 'State Name', name: 'StateName', tooltip: 'State Name', temp: '<i>' },
+								{ cap: 'State Code', name: 'StateCode', tooltip: 'State Code', temp: '<i>' }
+							],
+							data: stateList,
+							countryList: countryList
+						});
+
+						$(document.body).append(gvStates);
+					},
+					error: function (e) {
+						console.log(e);
+					}
+				})
+
+			},
+			error: function (e) {
+				console.log(e);
+			}
+		});
+		
+		/*
+		var countryList = new CountryList;
+		countryList.push(new Country({ CountryID: 1, CountryName: 'Canada', CountryCode: 'CA' }));
+
+		var gvCountries = new GridView({
+			cols: [
+				{ cap: 'ID', name: 'CountryCode', title: 'Identifier' },
+				{ cap: 'Name', name: 'CountryName', title: 'Country Name' },
+				{ cap: 'Code', name: 'CountryCode', title: 'Country Code' },
+			],
+
+			data: countryList
+		});
+		$(document.body).append(gvCountries);
+		*/
+
+
+		//]]>
+	</script>
+</body>
+</html>

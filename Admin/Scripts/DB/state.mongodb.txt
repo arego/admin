@@ -1,0 +1,49 @@
+﻿var stateList = new StateList;
+
+var statesList = [{
+	ID: 0,
+	StateName: 'Alaska',
+	StateCode: 'AK',
+	CountryID: '2'
+},
+{	ID: 1,
+	StateName: 'Georgia',
+	StateCode: 'GA',
+	CountryID: '2'
+},
+{	ID: 2,
+	StateName: 'Florida',
+	StateCode: 'FL',
+	CountryID: '2'
+},
+{	ID: 3,
+	StateName: 'California',
+	StateCode: 'CA',
+	CountryID: '2'
+},
+{	ID: 4,
+	StateName: 'Goa',
+	StateCode: 'GA',
+	CountryID: '5'
+},
+{	ID: 5,
+	StateName: 'Maharashtra',
+	StateCode: 'MH',
+	CountryID: '5'
+},
+{	ID: 6,
+	StateName: 'Bern',
+	StateCode: 'BE',
+	CountryID: '6'
+},
+{	ID: 7,
+	StateName: 'Geneva',
+	StateCode: 'GE',
+	CountryID: '6'
+}];
+
+var states = statesList.map(function(item, i){
+	return new State(item);
+});
+
+StateList.prototype.push.apply(stateList, states);

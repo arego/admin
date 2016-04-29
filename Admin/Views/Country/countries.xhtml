@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<style>
+		@import url(../../Content/Style/country.css);
+	</style>
+	<script type="text/javascript" src="../../scripts/jQuery/jQuery-2.2.2.js"></script>
+	<script type="text/javascript" src="../../scripts/jQuery/ui/jQuery.ui.gridView.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Extention.js"></script>
+	<script type="text/javascript" src="../../scripts/Messages.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/PassiveModels/BaseModel.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/ActiveModels/BaseModel.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/PassiveModels/Country.js"></script>
+
+	<script type="text/javascript" src="../../scripts/Models/ModelLists/BaseModelList.js"></script>
+	<script type="text/javascript" src="../../scripts/Models/ModelLists/CountryList.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		//<![CDATA[
+
+		const DOMAIN = 'http://localhost:51039/';
+
+		function createGrid(connectionString) {
+			var gvCountries = new GridView({
+				editable: false,
+				removable: false,
+				cols: [
+					{ cap: 'ID', name: 'ID', tooltip: 'Identifier', temp: '<span>' },
+					{ cap: 'Name', alt: 'Country Name', name: 'CountryName', tooltip: 'CountryName', temp: '<i>', editTemp: '<input>', isSortable: true },
+					{ cap: 'Code', alt: 'Country Code', name: 'CountryCode', tooltip: 'CountryName', temp: '<i>', editTemp: '<input>', isSortable: true }
+				],
+				model: Country,
+				modelList: CountryList,
+				db: localStorage,
+				entity: 'countries'
+			});
+
+			$(document.body).append(gvCountries);
+		}
+
+		if (localStorage.countries) {
+			createGrid();
+		} else {
+			$.ajax({
+				url:  DOMAIN + 'Scripts/DB/countries.mongodb.txt',
+				success: function (result) {
+					eval(result);
+
+					localStorage.countries = JSON.stringify(countryList);
+					createGrid();
+				},
+				error: function (e) {
+					console.log(e);
+				}
+			});
+		}
+		//]]>
+	</script>
+</body>
+</html>
